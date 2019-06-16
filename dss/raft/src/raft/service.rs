@@ -36,8 +36,8 @@ pub struct RequestVoteReply {
 pub struct LogPb {
     #[prost(uint64, tag = "1")]
     pub term: u64,
-    #[prost(uint64, tag = "2")]
-    pub index: u64,
+    #[prost(bytes, tag = "2")]
+    pub data: Vec<u8>,
 }
 
 #[derive(Clone, PartialEq, Message)]
