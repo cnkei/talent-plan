@@ -1,0 +1,23 @@
+[package]
+name = "kvs"
+version = "0.1.0"
+authors = ["'Jason King' <'chn.kei@gmail.com'>"]
+description = "A key-value store"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+structopt = "0.2.18"
+
+[dev-dependencies]
+assert_cmd = "0.11.1"
+predicates = "1.0.1"
+
+[lib]
+test = false
+
+[[bin]]
+name = "kvs"
+test = false
+doctest = false
