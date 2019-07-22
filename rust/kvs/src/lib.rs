@@ -22,14 +22,14 @@
 //! let mut store = KvStore::new();
 //!
 //! store.set("key", "value");
-//! assert_eq!(Some(String::from("value")), store.get("key"));
+//! assert_eq!(Some(String::from("value")), store.get("key").unwrap());
 //!
 //! // empty key
-//! assert_eq!(None, store.get("no_such_key"));
+//! assert_eq!(None, store.get("no_such_key").unwrap());
 //!
 //! // removed key
 //! store.remove(String::from("key"));
-//! assert_eq!(None, store.get("key"));
+//! assert_eq!(None, store.get("key").unwrap());
 //! ```
 //!
 //! [`KvStore`]: struct.KvStore.html
@@ -38,5 +38,8 @@
 //! [`remove`]: struct.KvStore.html#method.remove
 
 pub use kvstore::KvStore;
+pub use result::Result;
 
 mod kvstore;
+mod result;
+mod file;

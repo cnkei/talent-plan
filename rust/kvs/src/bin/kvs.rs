@@ -30,7 +30,7 @@ enum Opt {
     },
 }
 
-fn main() {
+fn main() -> kvs::Result<()> {
     let opt = Opt::from_args();
 
     match opt {
